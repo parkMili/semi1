@@ -1,4 +1,4 @@
-package org.example.semi1.controller;
+package org.example.semi1.home.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
