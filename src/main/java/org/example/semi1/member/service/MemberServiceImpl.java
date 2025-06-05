@@ -1,6 +1,7 @@
 package org.example.semi1.member.service;
 
 import lombok.RequiredArgsConstructor;
+import org.example.semi1.member.domain.dto.LoginDTO;
 import org.example.semi1.member.domain.dto.Member;
 import org.example.semi1.member.domain.MemberDTO;
 import org.example.semi1.member.repository.MemberRepository;
@@ -29,7 +30,7 @@ public class MemberServiceImpl implements MemberService {
         // true/false 반환
     }
 
-    public Member loginMember(MemberDTO member) {
+    public Member loginMember(LoginDTO member) {
         Member findMember = memberMapper.findByUserid(member.getUserid());
 
         if (findMember == null || !findMember.getPasswd().equals(member.getPasswd())) {
